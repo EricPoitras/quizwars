@@ -32,6 +32,8 @@ function setAnswer() {
 	console.table(array_answers);
 	setAgentDialogue();
 	initializeQuestion(counter);
+	// Store answers to database
+	//setDatabase();
 }
 
 function setFeedback() {

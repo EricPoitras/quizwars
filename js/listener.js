@@ -16,6 +16,8 @@ btn_next.addEventListener("click", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
 	console.log("DOM fully loaded and parsed");
+	//getDatabase();
+	// Example for API Fetch asynchronous request to get JSON
 	console.table(array_questions);
 	console.table(array_answers);
 	initializeQuestion(counter);
