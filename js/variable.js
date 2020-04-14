@@ -1,3 +1,8 @@
+var sec_landing = document.getElementById("sec_landing");
+var sec_quiz = document.getElementById("sec_quiz");
+var input_username = document.getElementById("input_username");
+var btn_start = document.getElementById("btn_start");
+var btn_tutorial = document.getElementById("btn_tutorial");
 var text_statement = document.getElementById("text_statement");
 var input_1 = document.getElementById("input_1");
 var input_2 = document.getElementById("input_2");
@@ -15,7 +20,11 @@ var text_agent_dialogue = document.getElementById("text_agent_dialogue");
 var counter = 0;
 var hint_request = false;
 var start_time, end_time;
+var username;
 /*
+console.log(input_username);
+console.log(btn_start);
+console.log(btn_tutorial);
 console.log(text_statement);
 console.log(input_1);
 console.log(input_2);

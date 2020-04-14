@@ -20,6 +20,7 @@ function evaluateAnswer(response) {
 
 function setAnswer() {
 	array_answers[counter] = {
+		username: username,
 		answer: getAnswer(),
 		evaluation: evaluateAnswer(getAnswer()),
 		hint: hint_request,

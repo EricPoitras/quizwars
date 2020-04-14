@@ -27,7 +27,20 @@
 	<body>
 		<div class="container-fluid" style="height: 100vh;">
 			<div class="row justify-content-center align-items-center h-100">
-				<div class="col-10 col-md-8 col-lg-6">
+				<div id="sec_landing" class="col-8 col-md-6 col-lg-4">
+					<div class="card">
+						<div class="card-header">QUIZ WARS</div>
+						<div class="card-body">
+							<form>
+								<label for="input_username">Enter your username: </label>
+								<input id="input_username" class="form-control" type="text" placeholder="Han Solo">
+							</form>
+							<button id="btn_start" type="button" class="btn btn-secondary w-100 mt-3">Start</i></button>
+							<button id="btn_tutorial" type="button" class="btn btn-secondary w-100 mt-1" disabled>Tutorial</i></button>
+						</div>
+					</div>
+				</div>
+				<div id="sec_quiz" class="col-10 col-md-8 col-lg-6">
 					<div class="card">
 						<div class="card-header">QUIZ WARS</div>
 						<div class="card-body">
@@ -99,6 +112,7 @@
 		></script>
 		<script src="js/data.js"></script>
 		<script src="js/variable.js"></script>
+		<script src="js/router.js"></script>
 		<script src="js/controller.js"></script>
 		<script src="js/api.js"></script>
 		<script src="js/listener.js"></script>
