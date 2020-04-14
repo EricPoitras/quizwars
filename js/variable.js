@@ -1,0 +1,33 @@
+var text_statement = document.getElementById("text_statement");
+var input_1 = document.getElementById("input_1");
+var input_2 = document.getElementById("input_2");
+var cont_success = document.getElementById("cont_success");
+var cont_danger = document.getElementById("cont_danger");
+var btn_submit = document.getElementById("btn_submit");
+var text_question_id = document.getElementById("text_question_id");
+var text_question_total = document.getElementById("text_question_total");
+var text_question_correct = document.getElementById("text_question_correct");
+var text_question_incorrect = document.getElementById("text_question_incorrect");
+var btn_previous = document.getElementById("btn_previous");
+var btn_hint = document.getElementById("btn_hint");
+var btn_next = document.getElementById("btn_next");
+var text_agent_dialogue = document.getElementById("text_agent_dialogue");
+var counter = 0;
+var hint_request = false;
+var start_time, end_time;
+/*
+console.log(text_statement);
+console.log(input_1);
+console.log(input_2);
+console.log(cont_success);
+console.log(cont_danger);
+console.log(btn_submit);
+console.log(text_question_id);
+console.log(text_question_total);
+console.log(text_question_correct);
+console.log(text_question_incorrect);
+console.log(btn_previous);
+console.log(btn_hint);
+console.log(btn_next);
+console.log(text_agent_dialogue);
+*/
