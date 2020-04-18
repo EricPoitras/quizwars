@@ -21,6 +21,7 @@ var counter = 0;
 var hint_request = false;
 var start_time, end_time;
 var username;
+var lrs;
 /*
 console.log(input_username);
 console.log(btn_start);
