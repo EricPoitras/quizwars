@@ -47,11 +47,17 @@ function setDatabase() {
 	});
 }
 
-// Working with TinCan.js and SCORM CLOUD
+// Working with TinCan.js
 function initializexAPIDatabase() {
-	var endpoint = "https://cloud.scorm.com/lrs/UFLRLFQEP4/";
-	var key = "Mav9ZzpzkqjMBVP9la4";
-	var secret = "eFe1hoayiTNIHdZvjZ0";
+	// SCORM CLOUD for debugging and testing
+	//var endpoint = "https://cloud.scorm.com/lrs/UFLRLFQEP4/";
+	//var key = "Mav9ZzpzkqjMBVP9la4";
+	//var secret = "eFe1hoayiTNIHdZvjZ0";
+
+	// Watershed LRS for production
+	var endpoint = "https://watershedlrs.com/api/organizations/11524/lrs/";
+	var key = "2786545bd25887";
+	var secret = "7ba3b0da667b21";
 
 	try {
 		lrs = new TinCan.LRS({
@@ -65,16 +71,26 @@ function initializexAPIDatabase() {
 	}
 }
 
-function setxAPIDatabase() {
+function setxAPIDatabase(username, verb, target) {
 	var statement = new TinCan.Statement({
 		actor: {
-			mbox: "mailto:info@tincanapi.com",
+			name: username,
+			mbox: "mailto:quizwars@example.com",
 		},
+		//http://xapi.vocab.pub/verbs/index.html
 		verb: {
-			id: "http://adlnet.gov/expapi/verbs/experienced",
+			id: "http://adlnet.gov/expapi/verbs/" + verb,
+			display: {
+				"en-US": verb,
+			},
 		},
 		target: {
-			id: "http://rusticisoftware.github.com/TinCanJS",
+			id: document.URL + "/" + target,
+			definition: {
+				name: {
+					"en-US": target,
+				},
+			},
 		},
 	});
 
@@ -98,11 +114,11 @@ function setxAPIDatabase() {
 	});
 }
 
-function getxAPIDatabase() {
+function getxAPIDatabase(verb) {
 	lrs.queryStatements({
 		params: {
 			verb: new TinCan.Verb({
-				id: "http://adlnet.gov/expapi/verbs/experienced",
+				id: "http://adlnet.gov/expapi/verbs/" + verb,
 			}),
 			since: "2016-01-05T08:34:16Z",
 		},
@@ -124,5 +140,5 @@ function getxAPIDatabase() {
 }
 // Test the functions
 //initializexAPIDatabase();
-//setxAPIDatabase();
-//getxAPIDatabase();
+//setxAPIDatabase("Eric Poitras", "experienced", "QuizWars");
+//getxAPIDatabase("experienced");
